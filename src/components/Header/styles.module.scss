@@ -1,0 +1,307 @@
+.headerComponent {
+  padding: 0 2.5rem;
+  height: 80px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  .logo {
+    height: 50px;
+    object-fit: contain;
+    @media (min-width: "1024px") {
+      animation: animate 0.25s forwards;
+      opacity: 0;
+      @keyframes animate {
+        100% {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  @media (max-width: "1024px") {
+    padding: 0 1.25rem;
+    height: 60px;
+    .logo {
+      height: 35px;
+    }
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    @media (max-width: "1024px") {
+      height: calc(100vh - 60px);
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: linear-gradient(
+        to top,
+        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0.8)
+      );
+      backdrop-filter: blur(5px);
+      visibility: hidden;
+      opacity: 0;
+      transform: translateX(-15rem);
+      transition: all 0.15s;
+      overflow: hidden;
+      &.active {
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(0);
+        transition: all 0.25s;
+        li {
+          transform: translateX(0rem);
+          transition: all 0.25s 0.1s;
+          opacity: 1;
+          &:nth-child(2) {
+            transition: all 0.25s 0.2s;
+          }
+          &:nth-child(3) {
+            transition: all 0.25s 0.3s;
+          }
+          &:nth-child(4) {
+            transition: all 0.25s 0.4s;
+          }
+          &:last-child {
+            transition: all 0.25s 0.5s;
+          }
+        }
+      }
+      ul {
+        margin-top: 7.5rem;
+        margin-right: 0;
+        height: 50%;
+        width: 100%;
+        justify-content: space-between;
+        flex-direction: column;
+
+        &::after {
+          display: none;
+        }
+        li {
+          margin: 0;
+          transform: translateX(-5rem);
+          transition: all 0.15s ease-in;
+          opacity: 0;
+        }
+      }
+    }
+  }
+  ul {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 0.5rem;
+    &::after {
+      content: "";
+      height: 125%;
+      width: 2px;
+      position: absolute;
+      right: -0.55rem;
+      border-radius: 1px;
+      background-color: var(--gray-500);
+      opacity: 0.5;
+      @media (min-width: "1024px") {
+        animation: fadeIn 0.25s 0.6s forwards;
+        opacity: 0;
+        @keyframes fadeIn {
+          100% {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+  li {
+    padding: 0.4rem 1rem;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: var(--text);
+    color: var(--gray-500);
+    transition: color 0.2s;
+    @media (min-width: "1024px") {
+      animation: animate 0.25s forwards;
+      transform: translateY(5rem);
+      opacity: 0;
+
+      &:nth-child(2) {
+        animation: animate 0.25s 0.1s forwards;
+      }
+      &:nth-child(3) {
+        animation: animate 0.25s 0.2s forwards;
+      }
+      &:nth-child(4) {
+        animation: animate 0.25s 0.3s forwards;
+      }
+      &:last-child {
+        animation: animate 0.25s 0.4s forwards;
+      }
+      @keyframes animate {
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+    }
+
+    &.active {
+      color: var(--black);
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        height: 3.5px;
+        width: 100%;
+        background: linear-gradient(to right, var(--blue-500), var(--blue-200));
+      }
+    }
+    & + li {
+      margin-left: 1.5rem;
+      @media (max-width: "1250px") {
+        margin-left: 1rem;
+      }
+    }
+
+    @media (min-width: "1024px") {
+      &:hover {
+        color: var(--black);
+      }
+    }
+  }
+  .socialsHeader {
+    padding: 0.2rem 0;
+    padding-left: 1rem;
+
+    a {
+      font-size: 0;
+      & + a {
+        margin-left: 1.25rem;
+      }
+
+      @media (min-width: "1024px") {
+        &:hover img {
+          opacity: 0.6;
+        }
+      }
+    }
+    img {
+      height: 26px;
+      width: 26px;
+      transition: opacity 0.2s;
+    }
+    @media (min-width: "1024px") {
+      overflow: hidden;
+      a {
+        &:nth-child(2) img {
+          animation: slideIn 0.25s 0.3s forwards;
+        }
+        &:last-child img {
+          animation: slideIn 0.25s 0.5s forwards;
+        }
+        img {
+          animation: slideIn 0.25s 0.1s forwards;
+          opacity: 0;
+          transform: translateX(50px);
+        }
+        @keyframes slideIn {
+          100% {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+      }
+    }
+    @media (max-width: "1024px") {
+      margin-bottom: 2rem;
+      padding-left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      width: 100%;
+
+      &.active {
+        a {
+          transition: all 0.25s 0.3s;
+          transform: translateY(0);
+        }
+
+        &::before {
+          content: "";
+          height: 1px;
+          width: 80%;
+          position: absolute;
+          top: -2rem;
+          background: var(--gray-500);
+          opacity: 0.5;
+          transition: all 0.25s 0.3s;
+        }
+      }
+
+      &::before {
+        content: "";
+        height: 1px;
+        width: 80%;
+        position: absolute;
+        top: -2rem;
+        background: var(--gray-500);
+        transition: all 0.15s;
+        opacity: 0;
+      }
+      a {
+        transform: translateY(200%);
+        transition: all 0.05s;
+        & + a {
+          margin-left: 1.75rem;
+        }
+      }
+    }
+  }
+}
+
+.menu {
+  margin-right: -10px;
+  height: 50px;
+  width: 50px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: transparent;
+  border: 0;
+
+  @media (max-width: "1024px") {
+    display: flex;
+  }
+  span {
+    margin: 4px;
+    height: 2px;
+    width: 30px;
+    background: var(--gray-500);
+    transition: 0.15s;
+
+    &.active {
+      margin: 5px;
+      transform: rotate(45deg) translate(5.5px, 5px) scale(-1);
+      transition: 0.25s;
+
+      &:nth-child(2) {
+        opacity: 0;
+        transform: rotate(0) scale(-1);
+      }
+
+      &:last-child {
+        margin: 0;
+        transform: rotate(-45deg) translate(8px, -8px) scale(-1);
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.cardComponent {
+  height: 245px;
+  width: 208px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 8px;
+  border: 1px solid black;
+  cursor: pointer;
+  overflow: hidden;
+
+  &.service {
+    cursor: default;
+
+    img {
+      filter: brightness(1);
+    }
+  }
+
+  img {
+    height: 208px;
+    width: 208px;
+    object-fit: cover;
+    filter: brightness(0.85);
+    transition: 0.2s;
+  }
+  &:hover img {
+    filter: brightness(1);
+  }
+  p {
+    height: calc(100% - 208px);
+    width: 100%;
+    background: var(--black);
+    font-size: 1rem;
+    font-family: var(--text);
+    font-weight: 600;
+    text-align: center;
+    line-height: 35px;
+    color: var(--white);
+  }
+}

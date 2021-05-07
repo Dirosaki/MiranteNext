@@ -1,0 +1,22 @@
+.buttonComponent {
+  height: 2.875rem;
+  width: 10.75rem;
+  font-family: var(--title);
+  font-size: 1.25rem;
+  color: var(--black);
+  border-radius: 8px;
+  background: var(--white);
+  border: 2px solid transparent;
+  &.active {
+    background: var(--blue-500);
+    color: var(--white);
+  }
+  @media (min-width: "1024px") {
+    height: 3.125rem;
+    width: 12.5rem;
+    transition: 0.2s;
+    &:hover {
+      border: 2px solid var(--blue-500);
+    }
+  }
+}
