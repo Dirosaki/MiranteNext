@@ -1,5 +1,6 @@
-import Link from "next/link";
 import { useEffect, useState } from "react";
+import Head from "next/head";
+import Link from "next/link";
 
 import { ButtonPrimary } from "../components/ButtonPrimary";
 
@@ -17,7 +18,6 @@ export default function Home() {
       } else {
         setSlideCount(0);
       }
-      console.log(slideCount);
     }, 3000);
 
     if (slideCount === 0) {
@@ -35,31 +35,38 @@ export default function Home() {
   }, [slideCount]);
 
   return (
-    <main className={styles.container}>
-      <div className={styles.content}>
-        <h1>
-          Transparência <br /> é o nosso <br />
-          negócio!
-        </h1>
-        <h3>
-          As melhores soluções em vidraçaria <br />
-          da cidade, você só encontra aqui!
-        </h3>
-        <Link href="/contato" passHref>
-          <a>
-            <ButtonPrimary title="Fale conosco" classes={styles.button} />
-            Ir para contato
-          </a>
-        </Link>
-      </div>
-      <div className={styles.slide}>
-        <div className={styles.slideImage}>
-          <img src={slide} alt="Imagem Banner" />
+    <>
+      <Head>
+        <title>
+          Mirante Vidros | Vidraçaria | Transparência é o nosso negocio.
+        </title>
+      </Head>
+      <main className={styles.container}>
+        <div className={styles.content}>
+          <h1>
+            Transparência <br /> é o nosso <br />
+            negócio!
+          </h1>
+          <h3>
+            As melhores soluções em vidraçaria <br />
+            da cidade, você só encontra aqui!
+          </h3>
+          <Link href="/contato" passHref>
+            <a>
+              <ButtonPrimary title="Fale conosco" classes={styles.button} />
+              Ir para contato
+            </a>
+          </Link>
         </div>
-        {/* <div className={styles.slideName}> */}
-        <h4>{slideName}</h4>
-        {/* </div> */}
-      </div>
-    </main>
+        <div className={styles.slide}>
+          <div className={styles.slideImage}>
+            <img src={slide} alt="Imagem Banner" />
+          </div>
+          {/* <div className={styles.slideName}> */}
+          <h4>{slideName}</h4>
+          {/* </div> */}
+        </div>
+      </main>
+    </>
   );
 }
