@@ -3,7 +3,7 @@ import styles from "./styles.module.scss";
 interface CardProps {
   text: string;
   imagem: string;
-  description: string;
+  description?: string;
   onClick?: () => void;
   service?: boolean;
 }

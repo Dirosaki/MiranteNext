@@ -1,12 +1,11 @@
 .cardComponent {
   height: 245px;
-  width: 208px;
+  width: 12.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   border-radius: 8px;
-  border: 1px solid black;
   cursor: pointer;
   overflow: hidden;
 
@@ -20,7 +19,7 @@
 
   img {
     height: 208px;
-    width: 208px;
+    width: 12.5rem;
     object-fit: cover;
     filter: brightness(0.85);
     transition: 0.2s;

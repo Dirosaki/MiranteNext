@@ -67,6 +67,36 @@ export default function Home() {
           {/* </div> */}
         </div>
       </main>
+
+      <section className={ styles.sobre }>
+        <h1>Quem somos</h1>
+        <p>
+          A Mirante Vidros se baseia na satisfação de seus Clientes. Para tanto,
+          procura garantir qualidade dos produtos, preços competitivos e ótimo
+          atendimento, além de praticar uma política empresarial séria e
+          consciente, reinvestindo os resultados no próprio negócio, buscando o
+          crescimento sustentável e continuado e assumindo um compromisso com o
+          meio ambiente e com a sociedade.
+        </p>
+
+        <div className={ styles.visao }>
+          <div>
+            <h4>Visão</h4>
+            <p>Ser reconhecida em todo território, como a "Marca do Vidro".</p>
+          </div>
+
+          <div>
+            <h4>Missão</h4>
+            <p>Contribuir para o sucesso do Setor Vidreiro, Clientes e Parceiros.</p>
+          </div>
+
+          <div>
+            <h4>Valores</h4>
+            <p>Surpreender o Cliente, Ser eficiente e disciplinado, Querer aprender sempre, trabalhar em equipe, Agir com responsabilidade e segurança.</p>
+          </div>
+        </div>
+
+      </section>
     </>
   );
 }
