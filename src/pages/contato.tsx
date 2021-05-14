@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { ButtonPrimary } from "../components/ButtonPrimary";
 import Input from "../components/Input";
-import styles from "./styles/contatos.module.scss";
+import styles from "./styles/contato.module.scss";
 
 export default function Contato() {
   const inputRef = useRef<HTMLInputElement>(null);
