@@ -1,0 +1,119 @@
+.border {
+  background: linear-gradient(to bottom, var(--black), var(--blue-200));
+  padding: 2px;
+  margin: 80px 0 0 50%;
+  position: absolute;
+  top: 0px;
+  z-index: 1000;
+  transform: translateX(-50%);
+  border-radius: 8px;
+}
+
+.modal {
+  padding: 20px 20px 0;
+  background: var(--black);
+  border-radius: 8px;
+  color: var(--white);
+  font-family: var(--text);
+  width: 45vw;
+  min-width: 750px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .imagem {
+    height: 450px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    position: relative;
+    .iconClose {
+      position: absolute;
+      font-size: 3rem;
+      cursor: pointer;
+      color: var(--white);
+      opacity: 1;
+      transition: 0.2s;
+      top: 1rem;
+      right: 1rem;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+    img {
+      height: 375px;
+      width: 450px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 2px -4px 4px rgba(0, 0, 0, 0.25),
+        -2px -4px 4px rgba(0, 0, 0, 0.25);
+      user-select: none;
+    }
+  }
+  h2 {
+    line-height: 150%;
+    font-size: 2.5rem;
+    font-family: var(--text);
+    font-weight: 600;
+    margin-bottom: 2.25rem;
+    position: relative;
+    user-select: none;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      height: 3px;
+      width: 75%;
+      transform: translateX(-50%);
+      background: var(--blue-200);
+      border-radius: 8px;
+    }
+  }
+  p {
+    margin-bottom: 0.75rem;
+    line-height: 155%;
+    text-align: justify;
+    & + p {
+      margin-bottom: 1.5rem;
+    }
+  }
+  h5 {
+    font-family: var(--text);
+    font-weight: 600;
+    font-size: 1.375rem;
+    align-self: flex-start;
+    margin-bottom: 1.5rem;
+  }
+  ul {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    list-style: inside;
+    padding-left: 0.75rem;
+    li {
+      line-height: 160%;
+      & + li {
+        margin-top: 0.5rem;
+      }
+    }
+  }
+  a {
+    font-size: 0;
+    outline: none;
+  }
+  button {
+    margin: 3.75rem 0;
+  }
+}
+
+.overlay {
+  background: rgba(26, 26, 26, 0.65);
+  backdrop-filter: blur(3px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}

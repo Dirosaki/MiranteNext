@@ -26,8 +26,8 @@ export function Header() {
               <a>Início</a>
             </Link>
           </li>
-          <li className={router.pathname === "/sobre" ? styles.active : ""}>
-            <Link href="/sobre" passHref>
+          <li className={router.pathname === "/#sobre" ? styles.active : ""}>
+            <Link href="/#sobre" passHref>
               <a>Quem Somos</a>
             </Link>
           </li>

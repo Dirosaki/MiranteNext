@@ -68,7 +68,7 @@ export default function Home() {
         </div>
       </main>
 
-      <section className={ styles.sobre }>
+      <section className={styles.sobre} id="sobre">
         <h1>Quem somos</h1>
         <p>
           A Mirante Vidros se baseia na satisfação de seus Clientes. Para tanto,
@@ -79,7 +79,7 @@ export default function Home() {
           meio ambiente e com a sociedade.
         </p>
 
-        <div className={ styles.visao }>
+        <div className={styles.visao}>
           <div>
             <h4>Visão</h4>
             <p>Ser reconhecida em todo território, como a "Marca do Vidro".</p>
@@ -87,15 +87,20 @@ export default function Home() {
 
           <div>
             <h4>Missão</h4>
-            <p>Contribuir para o sucesso do Setor Vidreiro, Clientes e Parceiros.</p>
+            <p>
+              Contribuir para o sucesso do Setor Vidreiro, Clientes e Parceiros.
+            </p>
           </div>
 
           <div>
             <h4>Valores</h4>
-            <p>Surpreender o Cliente, Ser eficiente e disciplinado, Querer aprender sempre, trabalhar em equipe, Agir com responsabilidade e segurança.</p>
+            <p>
+              Surpreender o Cliente, Ser eficiente e disciplinado, Querer
+              aprender sempre, trabalhar em equipe, Agir com responsabilidade e
+              segurança.
+            </p>
           </div>
         </div>
-
       </section>
     </>
   );

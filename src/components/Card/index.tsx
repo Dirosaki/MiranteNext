@@ -1,3 +1,4 @@
+import { useCard } from "../../contexts/CardContext";
 import styles from "./styles.module.scss";
 
 interface CardProps {
@@ -15,10 +16,15 @@ export function Card({
   onClick,
   service = false,
 }: CardProps) {
+  const { getCard } = useCard();
+
   return (
     <div
       className={`${styles.cardComponent} ${service && styles.service}`}
-      onClick={onClick}
+      onClick={() => {
+        onClick();
+        getCard({ title: text, description: description, image: imagem });
+      }}
     >
       <img src={imagem} alt={description} />
       <p>{text}</p>
