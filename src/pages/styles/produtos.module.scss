@@ -1,45 +1,55 @@
-.main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: linear-gradient(161.35deg, var(--white) 12.62%, var(--blue-200)123.8%);
-    padding: 3rem 0 5rem;
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(
+    161.35deg,
+    var(--white) 12.62%,
+    var(--blue-200) 123.8%
+  );
+  padding: 3rem 0 5rem;
 
-    h1{
-        font-family: var(--title);
-        font-weight: 700;
-        font-size: 2.25rem;
-        color: var(--black);
-        line-height: 150%;
-        span{
-            color: var(--blue-500);
-        }
+  h1 {
+    font-family: var(--title);
+    font-weight: 700;
+    font-size: 2.25rem;
+    color: var(--black);
+    line-height: 150%;
+    span {
+      color: var(--blue-500);
     }
-    h4{
-        font-family: var(--title);
-        font-weight: 500;
-        font-size: 1.5rem;
-        color: var(--black);
-        line-height: 150%;
+  }
+  h4 {
+    font-family: var(--title);
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: var(--black);
+    line-height: 150%;
+  }
+  > p {
+    color: var(--gray-500);
+    text-align: center;
+    width: 70%;
+    font-size: 1.125rem;
+    font-family: var(--text);
+    line-height: 150%;
+    margin: 2rem 0 3rem;
+  }
+  .buttons {
+    display: flex;
+    gap: 1.625rem;
+    margin-bottom: 2.625rem;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1.625rem;
+  }
+  @media (max-width: "1024px") {
+    min-height: 100vh;
+    h1 {
+      margin-top: 60px;
     }
-    >p{
-        color: var(--gray-500);
-        text-align: center;
-        width: 70%;
-        font-size: 1.125rem;
-        font-family: var(--text);
-        line-height: 150%;
-        margin: 2rem 0 3rem;
-    }
-    .buttons{
-        display: flex;
-        gap: 1.625rem;
-        margin-bottom: 2.625rem;
-    }
-    .cards{
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        grid-template-rows: repeat(2,1fr);
-        gap: 1.625rem;
-    }
+  }
 }
