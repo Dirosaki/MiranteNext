@@ -52,4 +52,21 @@
       margin-top: 60px;
     }
   }
+  @media (max-width: "650px") {
+    .cards {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+    }
+  }
+  @media (max-width: "570px") {
+    .buttons {
+      flex-direction: column;
+    }
+  }
+  @media (max-width: "450px") {
+    .cards {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+    }
+  }
 }
